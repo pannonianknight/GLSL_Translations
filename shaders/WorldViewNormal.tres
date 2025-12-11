@@ -1,0 +1,77 @@
+[gd_resource type="VisualShader" load_steps=3 format=3 uid="uid://bsl3m1qqlcodx"]
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_skrxn"]
+input_name = "normal"
+
+[sub_resource type="VisualShaderNodeExpression" id="VisualShaderNodeExpression_t8cay"]
+size = Vector2(1120, 1080)
+expression = "// Pretpostavimo da je n_out60p0 Normala u View Space-u (Vector3)
+
+// 1. Transformacija u 4D vektor (XYZ je normala, 0.0 je ispravan W za vektore)
+vec4 view_normal_4D = vec4(n_out60p0, 0.0);
+
+// 2. Množenje s Inverznom View Matricom (INV_VIEW_MATRIX)
+// Inverzna View Matrica pretvara iz View Space-a u World Space.
+vec4 world_normal_4D = INV_VIEW_MATRIX * view_normal_4D;
+
+// 3. Izdvajanje XYZ komponenti i normalizacija
+// World Space Normala mora biti jedinična.
+n_out61p0 = normalize(world_normal_4D.xyz);"
+
+[resource]
+code = "shader_type spatial;
+render_mode blend_mix, depth_draw_opaque, depth_test_default, cull_back, diffuse_lambert, specular_schlick_ggx;
+
+
+
+
+void fragment() {
+// Input:2
+	vec3 n_out2p0 = NORMAL;
+
+
+	vec3 n_out3p0;
+// Expression:3
+	n_out3p0 = vec3(0.0, 0.0, 0.0);
+	{
+		// Pretpostavimo da je n_out2p0 Normala u View Space-u (Vector3)
+		
+		// 1. Transformacija u 4D vektor (XYZ je normala, 0.0 je ispravan W za vektore)
+		vec4 view_normal_4D = vec4(n_out2p0, 0.0);
+		
+		// 2. Množenje s Inverznom View Matricom (INV_VIEW_MATRIX)
+		// Inverzna View Matrica pretvara iz View Space-a u World Space.
+		vec4 world_normal_4D = INV_VIEW_MATRIX * view_normal_4D;
+		
+		// 3. Izdvajanje XYZ komponenti i normalizacija
+		// World Space Normala mora biti jedinična.
+		n_out3p0 = normalize(world_normal_4D.xyz);
+	}
+
+
+// Output:0
+	ALBEDO = n_out3p0;
+
+
+}
+"
+nodes/fragment/2/node = SubResource("VisualShaderNodeInput_skrxn")
+nodes/fragment/2/position = Vector2(-1300, 300)
+nodes/fragment/3/node = SubResource("VisualShaderNodeExpression_t8cay")
+nodes/fragment/3/position = Vector2(-1660, 460)
+nodes/fragment/3/size = Vector2(1120, 1080)
+nodes/fragment/3/input_ports = "0,4,n_out60p0;"
+nodes/fragment/3/output_ports = "0,4,n_out61p0;"
+nodes/fragment/3/expression = "// Pretpostavimo da je n_out60p0 Normala u View Space-u (Vector3)
+
+// 1. Transformacija u 4D vektor (XYZ je normala, 0.0 je ispravan W za vektore)
+vec4 view_normal_4D = vec4(n_out60p0, 0.0);
+
+// 2. Množenje s Inverznom View Matricom (INV_VIEW_MATRIX)
+// Inverzna View Matrica pretvara iz View Space-a u World Space.
+vec4 world_normal_4D = INV_VIEW_MATRIX * view_normal_4D;
+
+// 3. Izdvajanje XYZ komponenti i normalizacija
+// World Space Normala mora biti jedinična.
+n_out61p0 = normalize(world_normal_4D.xyz);"
+nodes/fragment/connections = PackedInt32Array(2, 0, 3, 0, 3, 0, 0, 0)

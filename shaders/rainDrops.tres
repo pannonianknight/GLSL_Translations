@@ -21,7 +21,7 @@ linked_parent_graph_frame = 16
 op_type = 0
 
 [sub_resource type="VisualShaderNodeFrame" id="VisualShaderNodeFrame_6lagv"]
-size = Vector2(3416, 1223)
+size = Vector2(3416, 1340)
 title = "Normal Extraction"
 tint_color_enabled = true
 tint_color = Color(0.17578125, 0.17578125, 0.17578125, 0.75)
@@ -29,7 +29,7 @@ attached_nodes = PackedInt32Array(48, 9, 12, 16, 17, 49, 71, 72, 76)
 
 [sub_resource type="VisualShaderNodeFrame" id="VisualShaderNodeFrame_ph7u5"]
 linked_parent_graph_frame = 15
-size = Vector2(1596, 303)
+size = Vector2(1596, 420)
 title = "Helper_F"
 attached_nodes = PackedInt32Array(14, 13, 18, 19)
 
@@ -108,7 +108,7 @@ linked_parent_graph_frame = 47
 operator = 2
 
 [sub_resource type="VisualShaderNodeFrame" id="VisualShaderNodeFrame_t77vl"]
-size = Vector2(2876, 1283)
+size = Vector2(2876, 1366)
 title = "Temporal Function"
 attached_nodes = PackedInt32Array(44, 46, 45, 43, 40, 42, 41, 39, 38, 55, 56, 69, 62, 68)
 

@@ -1,0 +1,27 @@
+[gd_resource type="VisualShader" load_steps=2 format=3 uid="uid://dkwdw27lf7ug"]
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_lty0w"]
+input_name = "node_position_world"
+
+[resource]
+code = "shader_type spatial;
+render_mode blend_mix, depth_draw_opaque, depth_test_default, cull_back, diffuse_lambert, specular_schlick_ggx;
+
+
+
+
+void fragment() {
+// Input:2
+	vec3 n_out2p0 = NODE_POSITION_WORLD;
+
+
+// Output:0
+	ALBEDO = n_out2p0;
+
+
+}
+"
+nodes/fragment/0/position = Vector2(1560, 240)
+nodes/fragment/2/node = SubResource("VisualShaderNodeInput_lty0w")
+nodes/fragment/2/position = Vector2(-180, 380)
+nodes/fragment/connections = PackedInt32Array(2, 0, 0, 0)
