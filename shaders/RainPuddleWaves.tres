@@ -1,4 +1,4 @@
-[gd_resource type="VisualShader" load_steps=36 format=3 uid="uid://mmfwgleckj54"]
+[gd_resource type="VisualShader" load_steps=37 format=3 uid="uid://mmfwgleckj54"]
 
 [ext_resource type="Texture2D" uid="uid://bx4nutgp8du4x" path="res://shaders/T_Water_N.exr" id="2_uxjoh"]
 
@@ -10,13 +10,17 @@ parameter_name = "wind_speed2"
 hint = 1
 max = 10.0
 default_value_enabled = true
-default_value = 7.0
+default_value = 10.0
 
 [sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_xhdws"]
 input_name = "uv"
 
 [sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_fkcai"]
 texture = ExtResource("2_uxjoh")
+
+[sub_resource type="VisualShaderNodeFrame" id="VisualShaderNodeFrame_prip4"]
+size = Vector2(5796, 2800.0007)
+attached_nodes = PackedInt32Array(52, 94, 86, 79, 53, 98, 95, 91, 97, 96, 93, 92, 87, 84, 83, 78, 77, 76, 68, 67, 64, 57, 56, 54, 50, 49)
 
 [sub_resource type="VisualShaderNodeColorConstant" id="VisualShaderNodeColorConstant_uxjoh"]
 constant = Color(0, 0, 0, 1)
@@ -29,125 +33,164 @@ constant = 0.55
 
 [sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_prip4"]
 expanded_output_ports = [0]
+linked_parent_graph_frame = 105
 texture = ExtResource("2_uxjoh")
 texture_type = 2
 
 [sub_resource type="VisualShaderNodeUVFunc" id="VisualShaderNodeUVFunc_uxjoh"]
 default_input_values = [1, Vector2(0.1, 1), 2, Vector2(0.1, 0.1)]
+linked_parent_graph_frame = 105
 
 [sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_xhdws"]
 expanded_output_ports = [0]
+linked_parent_graph_frame = 105
 texture = ExtResource("2_uxjoh")
 texture_type = 2
 
 [sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_fkcai"]
+linked_parent_graph_frame = 105
 input_name = "time"
 
 [sub_resource type="VisualShaderNodeUVFunc" id="VisualShaderNodeUVFunc_hjgei"]
 default_input_values = [1, Vector2(0, 0.1), 2, Vector2(-0.1, -0.1)]
+linked_parent_graph_frame = 105
 
 [sub_resource type="VisualShaderNodeVectorCompose" id="VisualShaderNodeVectorCompose_ufuhs"]
 default_input_values = [0, 0.018, 1, 0.013, 2, 0.007, 3, 0.017]
 expanded_output_ports = [0]
+linked_parent_graph_frame = 105
 op_type = 2
 
 [sub_resource type="VisualShaderNodeVectorCompose" id="VisualShaderNodeVectorCompose_i8f8t"]
 default_input_values = [0, 0.4, 1, 0.02, 2, -0.1, 3, 0.4]
 expanded_output_ports = [0]
+linked_parent_graph_frame = 105
 op_type = 2
 
 [sub_resource type="VisualShaderNodeVectorCompose" id="VisualShaderNodeVectorCompose_y5un5"]
+linked_parent_graph_frame = 105
 op_type = 0
 
 [sub_resource type="VisualShaderNodeVectorCompose" id="VisualShaderNodeVectorCompose_ci87j"]
+linked_parent_graph_frame = 105
 op_type = 0
 
 [sub_resource type="VisualShaderNodeVectorCompose" id="VisualShaderNodeVectorCompose_2evoa"]
+linked_parent_graph_frame = 105
 op_type = 0
 
 [sub_resource type="VisualShaderNodeVectorCompose" id="VisualShaderNodeVectorCompose_hjgei"]
+linked_parent_graph_frame = 105
 op_type = 0
 
 [sub_resource type="VisualShaderNodeVectorOp" id="VisualShaderNodeVectorOp_ufuhs"]
 default_input_values = [0, Vector2(0, 0), 1, Vector2(1, 1)]
+linked_parent_graph_frame = 105
 op_type = 0
 operator = 2
 
 [sub_resource type="VisualShaderNodeVectorOp" id="VisualShaderNodeVectorOp_i8f8t"]
 default_input_values = [0, Vector2(0, 0), 1, Vector2(0, 0)]
+linked_parent_graph_frame = 105
 op_type = 0
 operator = 2
 
 [sub_resource type="VisualShaderNodeMix" id="VisualShaderNodeMix_eqt2p"]
 default_input_values = [0, Vector3(0, 0, 0), 1, Vector3(0, 0, 0), 2, Vector3(0.5, 0.5, 0.5)]
+linked_parent_graph_frame = 105
 op_type = 3
 
 [sub_resource type="VisualShaderNodeVectorOp" id="VisualShaderNodeVectorOp_ld84k"]
 default_input_values = [0, Vector2(0, 0), 1, Vector2(0, 0)]
+linked_parent_graph_frame = 105
 op_type = 0
 operator = 2
 
 [sub_resource type="VisualShaderNodeVectorOp" id="VisualShaderNodeVectorOp_ljwvn"]
 default_input_values = [0, Vector2(0, 0), 1, Vector2(0, 0)]
+linked_parent_graph_frame = 105
 op_type = 0
 operator = 2
 
 [sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_6m0fw"]
+linked_parent_graph_frame = 105
 parameter_name = "wind_speed"
 hint = 1
 max = 10.0
 default_value_enabled = true
 
 [sub_resource type="VisualShaderNodeReroute" id="VisualShaderNodeReroute_fcnd8"]
+linked_parent_graph_frame = 105
 
 [sub_resource type="VisualShaderNodeVectorOp" id="VisualShaderNodeVectorOp_li4xg"]
 default_input_values = [0, Vector3(0, 0, 0), 1, Vector3(2, 2, 2)]
 expanded_output_ports = [0]
+linked_parent_graph_frame = 105
 operator = 2
 
 [sub_resource type="VisualShaderNodeVectorOp" id="VisualShaderNodeVectorOp_y5un5"]
+linked_parent_graph_frame = 105
 
 [sub_resource type="VisualShaderNodeVectorOp" id="VisualShaderNodeVectorOp_aujwa"]
 default_input_values = [0, Vector3(0, 0, 0), 1, Vector3(2, 2, 2)]
 expanded_output_ports = [0]
+linked_parent_graph_frame = 105
 operator = 2
 
 [sub_resource type="VisualShaderNodeVectorFunc" id="VisualShaderNodeVectorFunc_l2tmb"]
+linked_parent_graph_frame = 105
 
 [sub_resource type="VisualShaderNodeVectorOp" id="VisualShaderNodeVectorOp_ci87j"]
 default_input_values = [0, Vector3(0, 0, 0), 1, Vector3(1, 1, 1)]
 expanded_output_ports = [0]
+linked_parent_graph_frame = 105
 operator = 1
 
 [sub_resource type="VisualShaderNodeVectorOp" id="VisualShaderNodeVectorOp_2evoa"]
 default_input_values = [0, Vector3(0, 0, 0), 1, Vector3(1, 1, 1)]
 expanded_output_ports = [0]
+linked_parent_graph_frame = 105
 operator = 1
 
 [sub_resource type="VisualShaderNodeVectorCompose" id="VisualShaderNodeVectorCompose_lso4x"]
 default_input_values = [0, 0.0, 1, 0.0, 2, 1.0]
+linked_parent_graph_frame = 105
 
 [sub_resource type="VisualShaderNodeClamp" id="VisualShaderNodeClamp_f143r"]
+linked_parent_graph_frame = 105
 
 [sub_resource type="VisualShaderNodeExpression" id="VisualShaderNodeExpression_b7mv2"]
 size = Vector2(1820, 1860)
-expression = " // Pre-calculated animation vectors
-        vec2 anim1 = vec2(TIME * wind_speed2 * 0.0072, TIME * wind_speed2 * 0.00026);
-        vec2 anim2 = vec2(TIME * wind_speed2 * -0.0007, TIME * wind_speed2 * 0.0068);
-        
-        // Sample the texture at two different animated UVs
-        vec3 normal1 = texture(tex_frg_104, UV + anim1).rgb * 2.0 - 1.0;
-        vec3 normal2 = texture(tex_frg_104, UV + anim2).rgb * 2.0 - 1.0;
-        
-        // Blend normals and mix with flat normal
-        vec3 blended = normalize(normal1 + normal2);
-        n_out99p0 = mix(vec3(0.0, 0.0, 1.0), blended, clamp(wind_speed2, 0.0, 1.0));"
+expression = "// Your exact code, but with normal_intensity calculated from wind_speed2
+vec2 anim1 = vec2(TIME * wind_speed2 * 0.0072, TIME * wind_speed2 * 0.00026);
+vec2 anim2 = vec2(TIME * wind_speed2 * -0.0007, TIME * wind_speed2 * 0.0068);
+
+vec3 normal1 = texture(tex_frg_104, UV + anim1).rgb * 2.0 - 1.0;
+vec3 normal2 = texture(tex_frg_104, UV + anim2).rgb * 2.0 - 1.0;
+
+vec3 blended = normalize(normal1 + normal2);
+vec3 flat_normal = vec3(0.0, 0.0, 1.0);
+
+// Calculate both from wind_speed2 (removing normal_intensity input)
+float wind_presence = clamp(wind_speed2, 0.0, 1.0); 
+float wave_strength = wind_presence * (wind_speed2 / 10.0); // normal_intensity = wind_speed2/10.0
+
+// Scale the perturbation
+vec3 scaled_normal = vec3(
+    flat_normal.x + (blended.x - flat_normal.x) * wave_strength,
+    flat_normal.y + (blended.y - flat_normal.y) * wave_strength,
+    flat_normal.z + (blended.z - flat_normal.z) * wave_strength
+);
+scaled_normal = normalize(scaled_normal);
+
+// Final mix
+n_out99p0 = mix(flat_normal, scaled_normal, wind_presence);"
 
 [resource]
 code = "shader_type spatial;
 render_mode blend_mix, depth_draw_opaque, depth_test_default, cull_back, diffuse_lambert, specular_schlick_ggx;
 
-uniform float wind_speed2 : hint_range(0.0, 10.0) = 7.0;
+uniform float wind_speed2 : hint_range(0.0, 10.0) = 10.0;
 uniform sampler2D tex_frg_104;
 
 
@@ -185,17 +228,30 @@ void fragment() {
 // Expression:99
 	n_out99p0 = vec3(0.0, 0.0, 0.0);
 	{
-		 // Pre-calculated animation vectors
-		        vec2 anim1 = vec2(n_out100p0 * wind_speed2 * 0.0072, n_out100p0 * wind_speed2 * 0.00026);
-		        vec2 anim2 = vec2(n_out100p0 * wind_speed2 * -0.0007, n_out100p0 * wind_speed2 * 0.0068);
-		        
-		        // Sample the texture at two different animated UVs
-		        vec3 normal1 = texture(tex_frg_104, n_out103p0 + anim1).rgb * 2.0 - 1.0;
-		        vec3 normal2 = texture(tex_frg_104, n_out103p0 + anim2).rgb * 2.0 - 1.0;
-		        
-		        // Blend normals and mix with flat normal
-		        vec3 blended = normalize(normal1 + normal2);
-		        n_out99p0 = mix(vec3(0.0, 0.0, 1.0), blended, clamp(wind_speed2, 0.0, 1.0));
+		// Your exact code, but with normal_intensity calculated from wind_speed2
+		vec2 anim1 = vec2(n_out100p0 * wind_speed2 * 0.0072, n_out100p0 * wind_speed2 * 0.00026);
+		vec2 anim2 = vec2(n_out100p0 * wind_speed2 * -0.0007, n_out100p0 * wind_speed2 * 0.0068);
+		
+		vec3 normal1 = texture(tex_frg_104, n_out103p0 + anim1).rgb * 2.0 - 1.0;
+		vec3 normal2 = texture(tex_frg_104, n_out103p0 + anim2).rgb * 2.0 - 1.0;
+		
+		vec3 blended = normalize(normal1 + normal2);
+		vec3 flat_normal = vec3(0.0, 0.0, 1.0);
+		
+		// Calculate both from wind_speed2 (removing normal_intensity input)
+		float wind_presence = clamp(wind_speed2, 0.0, 1.0); 
+		float wave_strength = wind_presence * (wind_speed2 / 10.0); // normal_intensity = wind_speed2/10.0
+		
+		// Scale the perturbation
+		vec3 scaled_normal = vec3(
+		    flat_normal.x + (blended.x - flat_normal.x) * wave_strength,
+		    flat_normal.y + (blended.y - flat_normal.y) * wave_strength,
+		    flat_normal.z + (blended.z - flat_normal.z) * wave_strength
+		);
+		scaled_normal = normalize(scaled_normal);
+		
+		// Final mix
+		n_out99p0 = mix(flat_normal, scaled_normal, wind_presence);
 	}
 
 
@@ -208,87 +264,102 @@ void fragment() {
 
 }
 "
-nodes/fragment/0/position = Vector2(140, 900)
+nodes/fragment/0/position = Vector2(-180, 1760)
 nodes/fragment/12/node = SubResource("VisualShaderNodeColorConstant_uxjoh")
-nodes/fragment/12/position = Vector2(-1680, 1120)
+nodes/fragment/12/position = Vector2(-1160, 1540)
 nodes/fragment/13/node = SubResource("VisualShaderNodeFloatConstant_prip4")
-nodes/fragment/13/position = Vector2(-1640, 1360)
+nodes/fragment/13/position = Vector2(-1180, 1760)
 nodes/fragment/42/node = SubResource("VisualShaderNodeFloatConstant_xhdws")
-nodes/fragment/42/position = Vector2(-1620, 1640)
+nodes/fragment/42/position = Vector2(-1160, 2000)
 nodes/fragment/49/node = SubResource("VisualShaderNodeTexture_prip4")
-nodes/fragment/49/position = Vector2(-5880, 1100)
+nodes/fragment/49/position = Vector2(-12040, 400)
 nodes/fragment/50/node = SubResource("VisualShaderNodeUVFunc_uxjoh")
-nodes/fragment/50/position = Vector2(-6500, 1360)
+nodes/fragment/50/position = Vector2(-12660, 660)
 nodes/fragment/52/node = SubResource("VisualShaderNodeTexture_xhdws")
-nodes/fragment/52/position = Vector2(-5880, 1840)
+nodes/fragment/52/position = Vector2(-12040, 1140)
 nodes/fragment/53/node = SubResource("VisualShaderNodeInput_fkcai")
-nodes/fragment/53/position = Vector2(-8040, 1940)
+nodes/fragment/53/position = Vector2(-14200, 1240)
 nodes/fragment/54/node = SubResource("VisualShaderNodeUVFunc_hjgei")
-nodes/fragment/54/position = Vector2(-6520, 2120)
+nodes/fragment/54/position = Vector2(-12680, 1420)
 nodes/fragment/56/node = SubResource("VisualShaderNodeVectorCompose_ufuhs")
-nodes/fragment/56/position = Vector2(-8280, 320)
+nodes/fragment/56/position = Vector2(-14440, -380)
 nodes/fragment/57/node = SubResource("VisualShaderNodeVectorCompose_i8f8t")
-nodes/fragment/57/position = Vector2(-8260, 2380)
+nodes/fragment/57/position = Vector2(-14420, 1680)
 nodes/fragment/64/node = SubResource("VisualShaderNodeVectorCompose_y5un5")
-nodes/fragment/64/position = Vector2(-7640, 440)
+nodes/fragment/64/position = Vector2(-13800, -260)
 nodes/fragment/67/node = SubResource("VisualShaderNodeVectorCompose_ci87j")
-nodes/fragment/67/position = Vector2(-7660, 2360)
+nodes/fragment/67/position = Vector2(-13820, 1660)
 nodes/fragment/68/node = SubResource("VisualShaderNodeVectorCompose_2evoa")
-nodes/fragment/68/position = Vector2(-7660, 780)
+nodes/fragment/68/position = Vector2(-13820, 80)
 nodes/fragment/76/node = SubResource("VisualShaderNodeVectorCompose_hjgei")
-nodes/fragment/76/position = Vector2(-7660, 2700)
+nodes/fragment/76/position = Vector2(-13820, 2000)
 nodes/fragment/77/node = SubResource("VisualShaderNodeVectorOp_ufuhs")
-nodes/fragment/77/position = Vector2(-7100, 1960)
+nodes/fragment/77/position = Vector2(-13260, 1260)
 nodes/fragment/78/node = SubResource("VisualShaderNodeVectorOp_i8f8t")
-nodes/fragment/78/position = Vector2(-7100, 2500)
+nodes/fragment/78/position = Vector2(-13260, 1800)
 nodes/fragment/79/node = SubResource("VisualShaderNodeMix_eqt2p")
-nodes/fragment/79/position = Vector2(-3360, 1040)
+nodes/fragment/79/position = Vector2(-9520, 340)
 nodes/fragment/83/node = SubResource("VisualShaderNodeVectorOp_ld84k")
-nodes/fragment/83/position = Vector2(-7080, 1420)
+nodes/fragment/83/position = Vector2(-13240, 720)
 nodes/fragment/84/node = SubResource("VisualShaderNodeVectorOp_ljwvn")
-nodes/fragment/84/position = Vector2(-7100, 860)
+nodes/fragment/84/position = Vector2(-13260, 160)
 nodes/fragment/86/node = SubResource("VisualShaderNodeFloatParameter_6m0fw")
-nodes/fragment/86/position = Vector2(-8740, 1260)
+nodes/fragment/86/position = Vector2(-14900, 560)
 nodes/fragment/87/node = SubResource("VisualShaderNodeReroute_fcnd8")
-nodes/fragment/87/position = Vector2(-4000, 1320)
+nodes/fragment/87/position = Vector2(-10160, 620)
 nodes/fragment/91/node = SubResource("VisualShaderNodeVectorOp_li4xg")
-nodes/fragment/91/position = Vector2(-5200, 1240)
+nodes/fragment/91/position = Vector2(-11360, 540)
 nodes/fragment/92/node = SubResource("VisualShaderNodeVectorOp_y5un5")
-nodes/fragment/92/position = Vector2(-4020, 1600)
+nodes/fragment/92/position = Vector2(-10180, 900)
 nodes/fragment/93/node = SubResource("VisualShaderNodeVectorOp_aujwa")
-nodes/fragment/93/position = Vector2(-5220, 1980)
+nodes/fragment/93/position = Vector2(-11380, 1280)
 nodes/fragment/94/node = SubResource("VisualShaderNodeVectorFunc_l2tmb")
-nodes/fragment/94/position = Vector2(-3480, 1600)
+nodes/fragment/94/position = Vector2(-9640, 900)
 nodes/fragment/95/node = SubResource("VisualShaderNodeVectorOp_ci87j")
-nodes/fragment/95/position = Vector2(-4640, 1240)
+nodes/fragment/95/position = Vector2(-10800, 540)
 nodes/fragment/96/node = SubResource("VisualShaderNodeVectorOp_2evoa")
-nodes/fragment/96/position = Vector2(-4660, 1980)
+nodes/fragment/96/position = Vector2(-10820, 1280)
 nodes/fragment/97/node = SubResource("VisualShaderNodeVectorCompose_lso4x")
-nodes/fragment/97/position = Vector2(-3800, 700)
+nodes/fragment/97/position = Vector2(-9960, 0)
 nodes/fragment/98/node = SubResource("VisualShaderNodeClamp_f143r")
-nodes/fragment/98/position = Vector2(-4200, 960)
+nodes/fragment/98/position = Vector2(-10360, 260)
 nodes/fragment/99/node = SubResource("VisualShaderNodeExpression_b7mv2")
 nodes/fragment/99/position = Vector2(-2040, 2220)
 nodes/fragment/99/size = Vector2(1820, 1860)
 nodes/fragment/99/input_ports = "0,3,UV;1,0,TIME;2,0,wind_speed;3,5,waterT;"
 nodes/fragment/99/output_ports = "0,4,n_out99p0;"
-nodes/fragment/99/expression = " // Pre-calculated animation vectors
-        vec2 anim1 = vec2(TIME * wind_speed2 * 0.0072, TIME * wind_speed2 * 0.00026);
-        vec2 anim2 = vec2(TIME * wind_speed2 * -0.0007, TIME * wind_speed2 * 0.0068);
-        
-        // Sample the texture at two different animated UVs
-        vec3 normal1 = texture(tex_frg_104, UV + anim1).rgb * 2.0 - 1.0;
-        vec3 normal2 = texture(tex_frg_104, UV + anim2).rgb * 2.0 - 1.0;
-        
-        // Blend normals and mix with flat normal
-        vec3 blended = normalize(normal1 + normal2);
-        n_out99p0 = mix(vec3(0.0, 0.0, 1.0), blended, clamp(wind_speed2, 0.0, 1.0));"
+nodes/fragment/99/expression = "// Your exact code, but with normal_intensity calculated from wind_speed2
+vec2 anim1 = vec2(TIME * wind_speed2 * 0.0072, TIME * wind_speed2 * 0.00026);
+vec2 anim2 = vec2(TIME * wind_speed2 * -0.0007, TIME * wind_speed2 * 0.0068);
+
+vec3 normal1 = texture(tex_frg_104, UV + anim1).rgb * 2.0 - 1.0;
+vec3 normal2 = texture(tex_frg_104, UV + anim2).rgb * 2.0 - 1.0;
+
+vec3 blended = normalize(normal1 + normal2);
+vec3 flat_normal = vec3(0.0, 0.0, 1.0);
+
+// Calculate both from wind_speed2 (removing normal_intensity input)
+float wind_presence = clamp(wind_speed2, 0.0, 1.0); 
+float wave_strength = wind_presence * (wind_speed2 / 10.0); // normal_intensity = wind_speed2/10.0
+
+// Scale the perturbation
+vec3 scaled_normal = vec3(
+    flat_normal.x + (blended.x - flat_normal.x) * wave_strength,
+    flat_normal.y + (blended.y - flat_normal.y) * wave_strength,
+    flat_normal.z + (blended.z - flat_normal.z) * wave_strength
+);
+scaled_normal = normalize(scaled_normal);
+
+// Final mix
+n_out99p0 = mix(flat_normal, scaled_normal, wind_presence);"
 nodes/fragment/100/node = SubResource("VisualShaderNodeInput_prip4")
-nodes/fragment/100/position = Vector2(-2840, 1980)
+nodes/fragment/100/position = Vector2(-2820, 1880)
 nodes/fragment/102/node = SubResource("VisualShaderNodeFloatParameter_uxjoh")
-nodes/fragment/102/position = Vector2(-2880, 2320)
+nodes/fragment/102/position = Vector2(-2820, 2060)
 nodes/fragment/103/node = SubResource("VisualShaderNodeInput_xhdws")
-nodes/fragment/103/position = Vector2(-2820, 1640)
+nodes/fragment/103/position = Vector2(-2840, 1700)
 nodes/fragment/104/node = SubResource("VisualShaderNodeTexture_fkcai")
-nodes/fragment/104/position = Vector2(-2880, 3020)
+nodes/fragment/104/position = Vector2(-2800, 2660)
+nodes/fragment/105/node = SubResource("VisualShaderNodeFrame_prip4")
+nodes/fragment/105/position = Vector2(-14940, -460)
 nodes/fragment/connections = PackedInt32Array(13, 0, 0, 3, 42, 0, 0, 4, 56, 1, 64, 0, 56, 2, 64, 1, 56, 3, 68, 0, 56, 4, 68, 1, 57, 1, 67, 0, 57, 2, 67, 1, 57, 3, 76, 0, 57, 4, 76, 1, 53, 0, 77, 0, 53, 0, 78, 0, 76, 0, 78, 1, 12, 0, 0, 0, 68, 0, 83, 1, 64, 0, 84, 1, 67, 0, 77, 1, 86, 0, 87, 0, 86, 0, 84, 0, 86, 0, 83, 0, 54, 0, 52, 0, 50, 0, 49, 0, 84, 0, 50, 1, 83, 0, 54, 1, 78, 0, 54, 2, 77, 0, 50, 2, 49, 0, 91, 0, 52, 0, 93, 0, 92, 0, 94, 0, 91, 0, 95, 0, 95, 0, 92, 0, 93, 0, 96, 0, 96, 0, 92, 1, 94, 0, 79, 1, 97, 0, 79, 0, 86, 0, 98, 0, 98, 0, 79, 2, 100, 0, 99, 1, 102, 0, 99, 2, 99, 0, 0, 8, 103, 0, 99, 0, 104, 0, 99, 3)
