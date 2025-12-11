@@ -1,11 +1,13 @@
-[gd_resource type="VisualShader" load_steps=11 format=3 uid="uid://c15delhjnbtt"]
+[gd_resource type="VisualShader" load_steps=12 format=3 uid="uid://c15delhjnbtt"]
 
 [ext_resource type="Texture2D" uid="uid://cm112ltfeqohb" path="res://shaders/textures/rain_ripples.tga" id="1_isgaa"]
 
 [sub_resource type="VisualShaderNodeFrame" id="VisualShaderNodeFrame_isgaa"]
-size = Vector2(2959.9976, 3942.0054)
+size = Vector2(2959.9998, 3941.9995)
 title = "Multi Layered Rain Ripple"
 attached_nodes = PackedInt32Array(5, 6, 4, 3, 2)
+
+[sub_resource type="VisualShaderNodeVectorFunc" id="VisualShaderNodeVectorFunc_isgaa"]
 
 [sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_xj6g8"]
 linked_parent_graph_frame = 10
@@ -98,13 +100,13 @@ n_out5p0 = normalize(vec3(normalOutput, 1.0));"
 
 [sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_fnx7d"]
 linked_parent_graph_frame = 10
-constant = 1.0
+constant = 0.55
 
 [sub_resource type="VisualShaderNodeColorConstant" id="VisualShaderNodeColorConstant_4ex4r"]
 constant = Color(0.038397167, 0.038397167, 0.03839716, 1)
 
 [sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_um7il"]
-constant = 0.05
+constant = 0.1
 
 [sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_y6xep"]
 constant = 0.5
@@ -123,7 +125,7 @@ void fragment() {
 
 
 // FloatConstant:8
-	float n_out8p0 = 0.050000;
+	float n_out8p0 = 0.100000;
 
 
 // FloatConstant:9
@@ -143,7 +145,7 @@ void fragment() {
 
 
 // FloatConstant:6
-	float n_out6p0 = 1.000000;
+	float n_out6p0 = 0.550000;
 
 
 	vec3 n_out5p0;
@@ -235,15 +237,15 @@ void fragment() {
 
 }
 "
-nodes/fragment/0/position = Vector2(2000, -1600)
+nodes/fragment/0/position = Vector2(860, -1780)
 nodes/fragment/2/node = SubResource("VisualShaderNodeTexture_xj6g8")
-nodes/fragment/2/position = Vector2(-3380, -640)
+nodes/fragment/2/position = Vector2(-2900, -660)
 nodes/fragment/3/node = SubResource("VisualShaderNodeInput_rpnsj")
-nodes/fragment/3/position = Vector2(-3440, -840)
+nodes/fragment/3/position = Vector2(-2960, -860)
 nodes/fragment/4/node = SubResource("VisualShaderNodeInput_j6gp1")
-nodes/fragment/4/position = Vector2(-3480, -1040)
+nodes/fragment/4/position = Vector2(-3000, -1060)
 nodes/fragment/5/node = SubResource("VisualShaderNodeExpression_wno3k")
-nodes/fragment/5/position = Vector2(-2380, -960)
+nodes/fragment/5/position = Vector2(-1900, -980)
 nodes/fragment/5/size = Vector2(1780, 3740)
 nodes/fragment/5/input_ports = "0,3,n_out4p0;1,0,n_out3p0;2,5,tex_frag_2;3,0,n_out6p0;"
 nodes/fragment/5/output_ports = "0,4,normal;"
@@ -321,7 +323,7 @@ for(int i = 0; i < 4; i++) {
 // Final Normal: Output
 n_out5p0 = normalize(vec3(normalOutput, 1.0));"
 nodes/fragment/6/node = SubResource("VisualShaderNodeFloatConstant_fnx7d")
-nodes/fragment/6/position = Vector2(-3280, -40)
+nodes/fragment/6/position = Vector2(-2800, -60)
 nodes/fragment/7/node = SubResource("VisualShaderNodeColorConstant_4ex4r")
 nodes/fragment/7/position = Vector2(160, -1860)
 nodes/fragment/8/node = SubResource("VisualShaderNodeFloatConstant_um7il")
@@ -329,5 +331,7 @@ nodes/fragment/8/position = Vector2(160, -1640)
 nodes/fragment/9/node = SubResource("VisualShaderNodeFloatConstant_y6xep")
 nodes/fragment/9/position = Vector2(160, -1420)
 nodes/fragment/10/node = SubResource("VisualShaderNodeFrame_isgaa")
-nodes/fragment/10/position = Vector2(-3520, -1120)
-nodes/fragment/connections = PackedInt32Array(4, 0, 5, 0, 6, 0, 5, 3, 2, 0, 5, 2, 3, 0, 5, 1, 8, 0, 0, 3, 9, 0, 0, 4, 5, 0, 0, 8, 7, 0, 0, 0)
+nodes/fragment/10/position = Vector2(-3040, -1140)
+nodes/fragment/11/node = SubResource("VisualShaderNodeVectorFunc_isgaa")
+nodes/fragment/11/position = Vector2(20.170155, -545.0541)
+nodes/fragment/connections = PackedInt32Array(4, 0, 5, 0, 6, 0, 5, 3, 2, 0, 5, 2, 3, 0, 5, 1, 8, 0, 0, 3, 9, 0, 0, 4, 5, 0, 11, 0, 7, 0, 0, 0, 5, 0, 0, 8)

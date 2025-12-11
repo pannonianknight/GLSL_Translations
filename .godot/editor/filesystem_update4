@@ -1,8 +1,8 @@
-res://scena_1a.tscn
-res://shaders/rainDrops.tres
 res://SceneNodes/scena_1a.tscn
-res://shaders/RainRipples.tres
+res://shaders/rainDrops.tres
 res://shaders/WorldViewNormal.tres
 res://shaders/RainPuddleWaves.tres
+res://shaders/RainRipples.tres
 res://shaders/NodeNormalsExp.tres
 res://shaders/Waves.gdshader
+res://shaders/CleanMirror.tres
