@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bf143utlcm6js"]
+
+[ext_resource type="Shader" uid="uid://xrtipw2almnv" path="res://shaders/rainDrops.tres" id="1_a202f"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_noarx"]
+render_priority = 0
+shader = ExtResource("1_a202f")
+shader_parameter/RainSpeed = 0.55
+
+[sub_resource type="SphereMesh" id="SphereMesh_a0tk4"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.9650898, 0.124703944, -0.23032758, -1.99638e-09, 0.87938285, 0.47611544, 0.26191965, 0.45949417, -0.84868324, 0, 0, 0)
+shadow_enabled = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("ShaderMaterial_noarx")
+mesh = SubResource("SphereMesh_a0tk4")

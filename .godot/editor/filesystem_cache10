@@ -1,0 +1,16 @@
+e910c82af1378a97450e26817c58487e
+::res://::1765456799
+icon.svg::CompressedTexture2D::4256509081344235464::1764582853::1765456701::1::::<><><>0<>0<>72c1847117164dc0699b83e3dc14341c<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+RippleEffectsMultiLayer.txt::TextFile::-1::1765456655::0::1::::<><><>0<>0<><>::
+scena_1a.tscn::PackedScene::7314478877082194119::1765456755::0::1::::<><><>0<>0<><>::uid://vkgfg6waw7f2::::res://Assets/bryanston_park_sunrise_1k.hdr<>uid://xrtipw2almnv::::res://shaders/rainDrops.tres
+::res://Assets/::1765456756
+bryanston_park_sunrise_1k.hdr::CompressedTexture2D::2785823335483524928::1765313939::1765456756::1::::<><><>0<>0<>3b2b714b4f79c3ecc5de733d24fd9a4b<>res://.godot/imported/bryanston_park_sunrise_1k.hdr-ce604cb83a572a75caf877b33acf1524.bptc.ctex<*>res://.godot/imported/bryanston_park_sunrise_1k.hdr-ce604cb83a572a75caf877b33acf1524.astc.ctex::
+german_town_street_1k.hdr::CompressedTexture2D::9186578558437635421::1765313886::1765456756::1::::<><><>0<>0<>390ec0714aca5d1227a0d9b6894fd015<>res://.godot/imported/german_town_street_1k.hdr-c9177b282783dcb56ec6a838e1cf708f.ctex::
+::res://SceneNodes/::1765456799
+node_3d.tscn::PackedScene::2792850598829638624::1765312745::0::1::::<><><>0<>0<><>::uid://xrtipw2almnv::::res://shaders/rainDrops.tres
+::res://shaders/::1765456778
+rainDrops.tres::VisualShader::1650606557770715447::1765456778::0::1::::<><><>0<>0<><>::uid://bop17867usfya::::res://shaders/textures/rain_drops.tga
+::res://shaders/textures/::1765456779
+rain_drop.tga::CompressedTexture2D::8742289561742127286::1764583815::1765456778::1::::<><><>0<>0<>56ede3f60c3d1fc9c7f41f48723e34bd<>res://.godot/imported/rain_drop.tga-18f550c775df42195fb70b3373641db9.ctex::
+rain_drops.tga::CompressedTexture2D::3401667730794201812::1765273761::1765456779::1::::<><><>0<>0<>56385bae3bbb8a4eb6773d699b228c69<>res://.godot/imported/rain_drops.tga-cfae3dd23bd3bc0f6382fae2093896ae.s3tc.ctex<*>res://.godot/imported/rain_drops.tga-cfae3dd23bd3bc0f6382fae2093896ae.etc2.ctex::
+rain_ripples.tga::CompressedTexture2D::5670408778236808391::1764590319::1765456778::1::::<><><>0<>0<>80644781cb4823a97462985eaa94c4ac<>res://.godot/imported/rain_ripples.tga-1bfff4a11c4f2e27daf0c856755765a1.ctex::

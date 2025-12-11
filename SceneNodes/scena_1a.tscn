@@ -1,0 +1,54 @@
+[gd_scene load_steps=10 format=3 uid="uid://dchgnsus2syol"]
+
+[ext_resource type="Texture2D" uid="uid://vkgfg6waw7f2" path="res://Assets/bryanston_park_sunrise_1k.hdr" id="1_gp5gc"]
+[ext_resource type="Shader" uid="uid://xrtipw2almnv" path="res://shaders/rainDrops.tres" id="1_hwkcr"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_odyjq"]
+panorama = ExtResource("1_gp5gc")
+energy_multiplier = 0.89
+
+[sub_resource type="Sky" id="Sky_gp5gc"]
+sky_material = SubResource("PanoramaSkyMaterial_odyjq")
+
+[sub_resource type="Environment" id="Environment_odyjq"]
+background_mode = 2
+background_energy_multiplier = 2.2
+sky = SubResource("Sky_gp5gc")
+ambient_light_source = 3
+ambient_light_energy = 3.13
+tonemap_mode = 2
+ssao_enabled = true
+sdfgi_enabled = true
+glow_enabled = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_noarx"]
+render_priority = 0
+shader = ExtResource("1_hwkcr")
+shader_parameter/RainSpeed = 0.55
+
+[sub_resource type="SphereMesh" id="SphereMesh_a0tk4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_irviv"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_h67x4"]
+
+[node name="Scena_1A" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_odyjq")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.8111797, 0.46689233, -0.35213515, 0.0054653287, 0.5960706, 0.8029132, 0.5847716, -0.6532315, 0.4809686, 0.6028843, 0.76968837, -0.8434986)
+light_color = Color(0.9808864, 0.9810303, 0.97183996, 1)
+shadow_enabled = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3381192, 0)
+visible = false
+material_override = SubResource("ShaderMaterial_noarx")
+mesh = SubResource("SphereMesh_a0tk4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.8950229, 0, 0, 0, 1, 0, 0, 0, 3.8950229, -0.11932969, 0.089915276, -0.012797475)
+material_override = SubResource("ShaderMaterial_irviv")
+mesh = SubResource("PlaneMesh_h67x4")
