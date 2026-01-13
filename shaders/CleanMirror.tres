@@ -1,10 +1,9 @@
 [gd_resource type="VisualShader" load_steps=6 format=3 uid="uid://dc30528ngyi84"]
 
 [sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_xilvu"]
-constant = 0.15
+constant = 0.25
 
 [sub_resource type="VisualShaderNodeColorConstant" id="VisualShaderNodeColorConstant_oobmx"]
-constant = Color(0, 0, 0, 1)
 
 [sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_0ife1"]
 constant = 0.55
@@ -24,11 +23,11 @@ render_mode blend_mix, depth_draw_opaque, depth_test_default, cull_back, diffuse
 
 void fragment() {
 // ColorConstant:3
-	vec4 n_out3p0 = vec4(0.000000, 0.000000, 0.000000, 1.000000);
+	vec4 n_out3p0 = vec4(1.000000, 1.000000, 1.000000, 1.000000);
 
 
 // FloatConstant:2
-	float n_out2p0 = 0.150000;
+	float n_out2p0 = 0.250000;
 
 
 // FloatConstant:4

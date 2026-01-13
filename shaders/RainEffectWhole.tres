@@ -1,0 +1,16 @@
+[gd_resource type="VisualShader" load_steps=3 format=3 uid="uid://nfq8qnrb02gg"]
+
+[ext_resource type="Texture2D" uid="uid://bxxqvaeccixcp" path="res://shaders/textures/distortion.tga" id="1_357uw"]
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_tvb48"]
+texture = ExtResource("1_357uw")
+
+[resource]
+code = "shader_type spatial;
+render_mode blend_mix, depth_draw_opaque, depth_test_default, cull_back, diffuse_lambert, specular_schlick_ggx;
+
+
+
+"
+nodes/fragment/2/node = SubResource("VisualShaderNodeTexture_tvb48")
+nodes/fragment/2/position = Vector2(-1200, 360)
